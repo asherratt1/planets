@@ -1,0 +1,35 @@
+Configure Name: git config --global user.name "NAME"
+Configure Email: git config --global user.email "EMAIL"
+
+Check if directory is a git repository: ls -a (should show .git file)
+Remove GIT: rm -rf __/.git
+
+Using GIT:
+Add files for git to track changes of: git add file
+Commit files: git commit -m "MESSAGE" (if no -m it will open nano to let you type a message)
+See project history: git log
+See difference between revisions: git diff
+	-if files have been added use: git diff --staged
+	-to see words that have been changed: git diff --color-words
+	-if git log takes up too much space: use q to quit, "spacebar" to change pages, and search with /WORD
+	-see difference between revisions: git diff HEAD or git diff HEAD~2 (whatever number but tells git how many revisions to go back
+See what you did two revisions ago: git show HEAD~2
+Revert changes if you overwrite a file: git checkout HEAD FILE (Again head to be modified to whichever revision by using ~)
+
+HEAD has a weird structure: HEAD, HEAD~1, HEAD~2 etc. 
+
+See both commits and changes made at each: git log --patch FILE
+
+You can create a .gitignore file that tells git which files to ignore. If you want to write an exception to that put "!" in front of the file and it will not ignore that fill
+
+USING GIT WITH GITHUB:
+To set it up: git remote add origin URL(Front online repository)
+Test: git remote -v
+Push changes: git push origin master (basically pushes changes from origin (computer) to master (GitHub)
+Pull changes (get them from github): git pull origin master
+
+Steps: git add FILE, git commit -m "MESSAGE" (for local), git push origin master
+
+For a preexisting repository (online) you can clone the repository on your computer using:  git clone URL FILEPATH_ON_COMPUTER
+
+
